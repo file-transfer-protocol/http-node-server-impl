@@ -1,34 +1,34 @@
-var path = require('path'),
-    rootPath = path.normalize(__dirname + '/..'),
-    env = process.env.NODE_ENV || 'development';
+var path = require('path');
+var rootPath = path.normalize(__dirname + '/..');
+var env = process.env.NODE_ENV || 'development';
 
 var config = {
-  development: {
-    root: rootPath,
-    app: {
-      name: 'vodafonetest'
+    development: {
+        root: rootPath,
+        app: {
+            name: 'vodafonetest'
+        },
+        port: 3000,
+        db: 'mongodb://localhost/vodafonetest-development'
     },
-    port: 3000,
-    db: 'mongodb://localhost/vodafonetest-development'
-  },
 
-  test: {
-    root: rootPath,
-    app: {
-      name: 'vodafonetest'
+    test: {
+        root: rootPath,
+        app: {
+            name: 'vodafonetest'
+        },
+        port: 3000,
+        db: 'mongodb://localhost/vodafonetest-test'
     },
-    port: 3000,
-    db: 'mongodb://localhost/vodafonetest-test'
-  },
 
-  production: {
-    root: rootPath,
-    app: {
-      name: 'vodafonetest'
-    },
-    port: 3000,
-    db: 'mongodb://localhost/vodafonetest-production'
-  }
+    production: {
+        root: rootPath,
+        app: {
+            name: 'vodafonetest'
+        },
+        port: 3000,
+        db: 'mongodb://localhost/vodafonetest-production'
+    }
 };
 
 module.exports = config[env];
