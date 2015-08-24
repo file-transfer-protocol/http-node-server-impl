@@ -4,13 +4,15 @@ var router = express.Router();
 //var Article = mongoose.model('Article');
 
 module.exports = function (app) {
-    app.use('/', router);
+    app.use('/ext', router);
 
+    // Handler functions
     var index = function (req, res, next) {
-        var data = '<h1>hello world</h1>';
+        var data = '<h1>External Service Handler</h1>';
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(data);
     }
 
+    // Handlers
     router.get('/', index);
 };
