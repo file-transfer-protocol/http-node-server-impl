@@ -17,7 +17,6 @@ module.exports = function (app, config) {
         extended: true
     }));
     app.use(cookieParser());
-    app.use(express.static(config.root + '/public'));
 
     var controllers = glob.sync(config.root + '/src/handlers/*.js');
     controllers.forEach(function (controller) {
