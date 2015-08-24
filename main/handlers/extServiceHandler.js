@@ -6,6 +6,8 @@ var router = express.Router();
 module.exports = function (app) {
     app.use('/ext', router);
 
+    //var util = require('../../lib/utils')().utilFnExample1();
+
     // Handler functions
     var index = function (req, res, next) {
         var data = '<h1>External Service Handler</h1>';
