@@ -6,28 +6,28 @@ var config = {
     development: {
         root: rootPath,
         app: {
-            name: 'vodafonetest'
+            name: 'protocolImpl'
         },
         port: 3000,
-        db: 'mongodb://localhost/vodafonetest-development'
+        db: 'mongodb://localhost/protocolImpl'
     },
 
     test: {
         root: rootPath,
         app: {
-            name: 'vodafonetest'
+            name: 'protocolImpl'
         },
         port: 3000,
-        db: 'mongodb://localhost/vodafonetest-test'
+        db: 'mongodb://localhost/protocolImpl-test'
     },
 
     production: {
         root: rootPath,
         app: {
-            name: 'vodafonetest'
+            name: 'protocolImpl'
         },
         port: 3000,
-        db: 'mongodb://localhost/vodafonetest-production'
+        db: 'mongodb://localhost/protocolImpl-production'
     }
 };
 
