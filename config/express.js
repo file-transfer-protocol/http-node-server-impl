@@ -18,14 +18,14 @@ module.exports = function (app, config) {
     }));
     app.use(cookieParser());
 
-    var handlers = glob.sync(config.root + '/main/handlers/*.js');
-    handlers.forEach(function (handler) {
-        require(handler)(app);
-    });
-
     var filters = glob.sync(config.root + '/main/filters/*.js');
     filters.forEach(function (filter) {
         require(filter)(app);
+    });
+
+    var handlers = glob.sync(config.root + '/main/handlers/*.js');
+    handlers.forEach(function (handler) {
+        require(handler)(app);
     });
 
     app.use(function (req, res, next) {
